@@ -10,6 +10,9 @@ const Navbar = () => {
   const collapseButtonRef = useRef(null);
   const listItemRefs = useRef([]);
   listItemRefs.current = [];
+  const navContent = useRef(null);
+  const navRoutes = useRef(null);
+  const navButtonAnimate = useRef(null);
 
   const addToRefs = (el) => {
     if (el && !listItemRefs.current.includes(el)) {
@@ -39,14 +42,15 @@ const Navbar = () => {
       tll.to(navCollapseRef.current, { y: '-100%', duration: 0.5, ease: "expo.inOut" });
     }
   }, [toggle]);
+  
 
   return (
     <CollapseContainer>
       <NavContainer className='container'>
-        <NavLogo>
+        <NavLogo ref={navContent}>
           <img src="https://www.zoetis.com/_assets/img/zoetis_logo.svg" alt="Logo" />
         </NavLogo>
-        <NavList>
+        <NavList ref={navRoutes}>
           <ul className='d-flex justify-content-between p-0 mx-5 my-0' style={{ listStyle: 'none' }}>
             <li>Our Company</li>
             <li>Products & Science</li>
@@ -56,7 +60,7 @@ const Navbar = () => {
             <li><img style={{ width: '30px' }} src="./assets/gifs/search.gif" alt="Search" /></li>
           </ul>
         </NavList>
-        <NavButton>Investor Relations</NavButton>
+        <NavButton ref={navButtonAnimate}>Investor Relations</NavButton>
         <NavToggle onClick={() => setToggle(!toggle)}>
           {toggle ? <CloseIcon /> : <MenuIcon />}
         </NavToggle>
@@ -120,14 +124,19 @@ const NavList = styled.div`
 
 const NavButton = styled.button`
   height: 40px;
-  border: 3px solid orange;
+  border: 3px solid #28a745;
   border-radius: 10px;
-  color: orange;
+  color: #28a745;
   background-color: white;
   transition: all ease 0.3s;
 
   @media (max-width: 991px) {
     display: none;
+  }
+
+  &:hover {
+    background-color: #28a745;
+    color: white;
   }
 `;
 
@@ -135,9 +144,9 @@ const CollapseButton = styled.button`
   @media (max-width: 991px) {
     opacity: 0;
     height: fit-content;
-    border: 3px solid orange;
+    border: 3px solid #28a745;
     border-radius: 10px;
-    color: orange;
+    color: #28a745;
     background-color: white;
     transition: all ease 0.3s;
   }
