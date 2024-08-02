@@ -4,6 +4,6 @@
 
 #Step 2: cd to the project medicalWebsite directory
 
-#Step 3: Install all the files require for this project (assumingg that you have node installed in your system): npm install 
+#Step 3: Install all the files require for this project (assuming that you have node installed in your system): npm install 
 
 #Step 4: Run the project: npm start
