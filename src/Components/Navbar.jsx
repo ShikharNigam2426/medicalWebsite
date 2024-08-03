@@ -21,6 +21,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    
     if (toggle) {
       const tl = gsap.timeline();
       tl.to(navCollapseRef.current, { y: 0, duration: 0.5, ease: "expo.inOut" });
@@ -65,7 +66,7 @@ const Navbar = () => {
           {toggle ? <CloseIcon /> : <MenuIcon />}
         </NavToggle>
       </NavContainer>
-      <NavCollapse ref={navCollapseRef}>
+      <NavCollapse ref={navCollapseRef} className='bg-success'>
         <CollapseList className='NavLists'>
           <ul className='d-flex flex-column justify-content-between p-0 mx-5 my-0' style={{ listStyle: 'none' }}>
             <li ref={addToRefs}>Our Company</li>
@@ -160,7 +161,7 @@ const NavCollapse = styled.div`
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: orange;
+  /* background-color: orange; */
   transform: translateY(-100%);
   display: flex;
   flex-direction: column;

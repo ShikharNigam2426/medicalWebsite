@@ -1,0 +1,15 @@
+.ubuntuFontHeading{
+    font-family: "Ubuntu", sans-serif !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+}
+
+.ubuntuFontPara{
+    font-family: "Ubuntu", sans-serif !important;
+    font-weight: 300 !important;
+    font-style: normal !important;
+}
+
+.colorSuccess{
+    color: #28a745!important;
+}
