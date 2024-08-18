@@ -409,7 +409,7 @@ const TimeLine = styled.input`
     top: 0;
     left: 0;
     height: 3px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.564);
     width: ${({ value }) => value}%;
     transition: 0.1s all ease;
     pointer-events: none;

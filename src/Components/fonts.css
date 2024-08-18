@@ -13,3 +13,7 @@
 .colorSuccess{
     color: #28a745!important;
 }
+
+.circle{
+    border-radius: 50%;
+}

@@ -86,7 +86,7 @@ const WelcomeContainer = styled.div`
     padding: 0rem 10rem;
     margin: 0px;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
     
     @media (max-width: 768px) {
       top: 110%;
